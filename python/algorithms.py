@@ -26,7 +26,7 @@ def reversiComparative(text):
     return text == text[::-1]
 
 
-def recursiveApproach(text):  # O(n)
+def recursiveApproach(text):  # O(n) -> O(n^2)
     """
 
     :param text: text to be comparative

@@ -1,5 +1,6 @@
 import unittest
 from python import algorithms
+from python.data_generator import get_random_palindrome
 
 words = ["radar", "level", "stats", "hello", "racecar", "python", "civic", "madam"]
 expected = [True, True, True, False, True, False, True, True]
@@ -27,6 +28,7 @@ class AlgorithmsTests(unittest.TestCase):
             exp = expected[i]
             answer = algorithms.recursiveApproach(word)
             self.assertEquals(answer, exp)
+
 
 
 if __name__ == "__main__":
