@@ -18,8 +18,8 @@ def get_random_palindrome(size):
 
     # Introducimos un cambio aleatorio en la segunda mitad
     second_half = first_half[::-1]
-    if random.random() < 0.5:  # 50% de las veces
-        second_half = second_half[:-1] + random.choice(string.ascii_lowercase)
+    ##if random.random() < 0.5:  # 50% de las veces
+    ##    second_half = second_half[:-1] + random.choice(string.ascii_lowercase)
 
     return first_half + second_half
 

@@ -30,6 +30,9 @@ def test_generar_palindromes():
     print("\nPalabras que no son palíndromas generadas aleatoriamente:")
     print(non_palindromes[:5])
 
+#if __name == "__main__":
+#    test_generar_palindromes()
+
 
 if __name__ == "__main__":
     minimum_size = 10000
@@ -39,11 +42,11 @@ if __name__ == "__main__":
 
     table = executing_time_gathering.take_execution_time(minimum_size, maximum_size, step, samples_by_size)
     df = pd.DataFrame(table,
-                      columns=["Size", "Direct Comparation",
-                               "Reversive Comparation", "Recursive Comparation"])
+                   columns=["Size", "Direct Comparation",
+                            "Reversive Comparation", "Recursive Comparation"])
     print(df)
 
     df.plot(x="Size",
-            y=["Direct Comparation", "Reversive Comparation", "Recursive Comparation"], kind="line", marker="x")
+         y=["Direct Comparation", "Reversive Comparation", "Recursive Comparation"], kind="line", marker="x")
 
     plt.show()
